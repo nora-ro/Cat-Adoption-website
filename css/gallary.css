@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+
+header{
+
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+    width: 100%;
+     
+}
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color:#4d0303
+}
+
+nav{
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 3%;
+   margin: auto;
+}
+#action{
+   padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4d0303;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+   
+}
+
+header a{
+    text-decoration: none;
+    margin: 10px;
+    color: #4d0303;
+   
+}
+
+
+
+.hero{
+    width: 100%;
+    height: calc(100vh-60px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color: white;
+}
+#name{
+     color: #8e836e;
+}
+.hero h1,p{
+    color: #7d7259;
+    margin-bottom: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:0 3%;
+
+} 
+
+.cat_box{
+    width: 30%;
+    gap: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1); 
+    cursor: pointer;
+    max-width: 380px;
+}
+.cat_box .img_box{
+    width: 100%; 
+    overflow: hidden;
+    background-color: aliceblue;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  
+}
+img{
+     width: 100%;
+     height: 200px;
+     object-fit: cover; 
+
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d0303;
+    padding: 4%;
+}
+
+
+
+
+
+

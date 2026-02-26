@@ -51,6 +51,9 @@ nav .nav_links li a:hover{
     font-weight: bold;
     color:#4d0303
 }
+li span{
+     color: #3d0a0a;
+}
 
 
 .home{
@@ -313,6 +316,33 @@ nav{
     margin-left: 10px;
     font-size: 30px;
 }
+
+ header .fa-bars ,#humb{
+        display: block;
+    }
+    
+    header .nav_links{
+        position:absolute;
+        top: 100%; left:0; right: 0;
+        border-top: .1rem solid rgb(0, 0,0,.1);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    header #humb:checked ~ .nav_links{
+        clip-path: polygon(0 0,100% 0,100% 100%, 0% 100%);
+    }
+    header .nav_links a{
+         margin: 1.5rem;
+         padding: 1.5rem;
+         border: .1rem solid rgb(0, 0,0,.1);  ;
+         display: block;
+         background-color: #0a0374;
+         border-radius: 1rem;
+    }
+
+
+
+
+
 
 .logo{
     margin-left: 10px;
