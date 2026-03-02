@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adoption Application</title>
+    <link rel="stylesheet" href="../css/adopt.css">
+</head>
+<body>
+
+    <div class="adopt_container">
+
+        <h1>Adoption Application</h1>
+
+        <div class="progress_text">
+            <span>Step 1 of 3</span>
+            <span>Step 1 of 3</span>
+        </div>
+
+        <progress id="steps" value="33" max="100"></progress>
+
+        <div class="personal_info">
+            <h2>Personal Information</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Phone Number" required>
+        </div>
+
+        <div class="home_info">
+            <div class="home">
+                <h2>Home Environment</h2>
+
+                <label>Type of Residence</label>
+                <select>
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Condo</option>
+                </select>
+            </div>
+
+            <div class="more">
+                <label>Do you own or rent?</label>
+                <div class="radio_group">
+                    <input type="radio" id="yes" name="home_status">
+                    <label for="yes">Yes</label>
+
+                    <input type="radio" id="no" name="home_status">
+                    <label for="no">No</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">Next Step</button>
+
+    </div>
+
+</body>
+</html>
