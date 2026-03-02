@@ -9,6 +9,9 @@
 body{
     overflow-x: hidden;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 
 header{
@@ -69,6 +72,7 @@ li span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 
     
 }
@@ -76,10 +80,12 @@ li span{
     font-size: 50px;
     margin-bottom: 20px;
     text-shadow: #3d3b3b 2px 2px 4px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 .home p{
     font-size: 20px;
     margin-bottom: 30px;
+     animation: fadeIn 1.8s ease-in-out;
 }
 .btn{
     padding: 12px 25px;
@@ -89,6 +95,7 @@ li span{
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    animation: fadeIn 2s ease-in-out;
    
 }
 .btn:hover{
@@ -110,7 +117,19 @@ li span{
     
     
 }
-h2,h3,.review_container, .img_box{ 
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+
+
+h2,.img_box{ 
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry  cover 40%;
@@ -128,6 +147,7 @@ h2,h3,.review_container, .img_box{
     font-size: 30px;
     margin-bottom: 40px;
     text-shadow: #a5a0a0 2px 2px 4px;
+    color: #3d0a0a;
    
 }
 .adoption .img_container{
@@ -157,7 +177,7 @@ i{
     cursor: pointer;
 }
 
-#humb{
+#toggler,.fa-bars,#tog{
     display: none;
 }
 
@@ -177,12 +197,49 @@ i{
     text-decoration: none;
     color: white;
 }
+/*.adoption .img_container .img_box:nth-child(even){
+    background-color: #430e0e;
+    color: rgb(248, 242, 242);
+}*/
+
+.about{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3%;
+    background-color: #f4f4f4;
+    margin: 50px 0;
+}
+.about .about_img{
+    width: 48%;
+    padding: 10px;
+    text-align: center;
+    
+}
+.about .about_img img{
+   width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+   
+}
+.about .info{
+    width: 48%;
+    font-size: 18px;
+    color: #3d0a0a;
+}
+.about .info h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: #a5a0a0 2px 2px 4px;
+}
 
 .reviews h2 {
     font-size: 20px;
     margin-bottom: 40px;
-    text-align: center;
-    text-shadow: #464545 2px 2px 4px;
+    text-align: center; 
+    text-shadow: #a5a0a0 2px 2px 4px;
+    color: #3d0a0a;
 
 }
 
@@ -195,16 +252,13 @@ i{
     gap: 3%;
     
 }
-.review_container div:nth-child(2){
-    background-color: #430e0e;
-    color: rgb(0, 0, 0);
-}
+
 .reviews .review_box{
-    width: 43%;
+    width: 48%;
     height: 250px;
     box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
     border-radius: 10px;
-    background-color: rgb(73, 70, 70);
+     background-color: #8b8989;
     padding: 20px;
     cursor: pointer;
     text-align: center;
@@ -219,7 +273,7 @@ i{
     transform: scale(1.05);
     transition: transform 0.5s;
     color: white;
-    background-color: black;
+
 
 }
 .review_box img{
@@ -237,7 +291,7 @@ i{
 
 
 
-footer{
+/*footer{
     background-color: #000000;
     color: white;
     text-align: center;
@@ -245,6 +299,71 @@ footer{
     margin-top: 20px;
 }
 
+header .fa-bars ,#toggler{
+        display: none;
+    }*/
+
+    
+footer a{
+ text-decoration: none;
+   padding: 0 1rem;
+   color: rgb(251, 247, 247);
+   
+}
+
+footer
+{ 
+color: rgb(251, 247, 247);
+padding: 20px ;
+display: flex;
+width: 100%;
+justify-content: space-between;
+padding-bottom: 40px;
+border-bottom: .1rem solid black;
+}
+.last{
+    font-size: 0.8rem;
+    background-color:rgb(81, 4, 4);
+    color: white;
+
+
+}
+#icon{
+  padding: 2rem; 
+  
+}
+#box ul{
+    list-style-type: none;   
+    padding: 10px;
+}
+#box li a{
+    color: rgb(255, 249, 249);
+    font-size: 1.2rem;
+}
+#icon i{
+    font-size: 20px;
+    color: rgb(255, 249, 249);
+}
+#icon i:hover,#box li a:hover{
+    color: #c15656;
+}
+.rights{
+    font-size: 1rem;
+    background-color:rgb(98, 2, 2);
+    color: white;
+   
+}
+#icon{
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    flex-direction: column;
+}
+.last #info{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
 
 
 /* Media Queries */
@@ -310,14 +429,8 @@ nav{
     justify-content:flex-start;
     padding: 0 10px;
 }
-#humb{
-    display: block;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 30px;
-}
 
- header .fa-bars ,#humb{
+ header .fa-bars ,#toggler{
         display: block;
     }
     
@@ -327,7 +440,7 @@ nav{
         border-top: .1rem solid rgb(0, 0,0,.1);
         clip-path: polygon(0 0,100% 0,100% 0,0 0);
     }
-    header #humb:checked ~ .nav_links{
+    header #toggler:checked~ .nav_links{
         clip-path: polygon(0 0,100% 0,100% 100%, 0% 100%);
     }
     header .nav_links a{

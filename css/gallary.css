@@ -120,6 +120,17 @@ img{
     background-color: #4d0303;
     padding: 4%;
 }
+.cat_box:hover{
+     transform: scale(1.02);
+     transition: transform 0.5s;
+}
+header a:hover{
+    color: #8e836e;
+}
+#action:hover{
+    background-color: #8e836e;
+    transform: scale(1.02);
+}
 
 
 
