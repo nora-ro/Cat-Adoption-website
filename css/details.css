@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:  #761012;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     display: flex;
+    justify-content: center;
+    align-items:center;
+     min-height:calc(100vh) ;
+}
+.container{
+    background:white;
+    max-width: 95%;
+    padding: 0 3%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    width: 1000px;
+   
+
+}
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    top:0;
+    
+    
+    
+}
+header a{
+    text-decoration: none;
+    color: rgb(136, 3, 3);
+    margin-left: 10px;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1%;
+    width: 100%;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+   
+
+}
+.img_box{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+   
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px; 
+    height: 400px;
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.151);
+    
+
+}
+.info{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    color: #705e4b;
+    height: 400px;
+    animation: fadein 2s ease-in-out;
+   
+  
+}
+.info h1{
+    color: #8e775e;
+   
+    padding:0 15px;
+}
+ul{
+    padding: 2%;
+  
+  
+}
+li{
+    margin: 5%;
+}
+p{
+    padding: 2%;
+    margin-bottom: 30px;
+}
+#btn_adopt{
+    padding: 12px 18px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    background-color: #761012;
+    color: #f4f1ee;
+    border: none;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.142);
+    transition: 0.2s;
+
+}
+.fav{
+    text-align: center;
+
+}
+#favor{
+    border-radius: 20px;
+    padding: 9px 18px;
+    color: #510506;
+    border: #510506 2px solid;
+    transition: 0.2s;
+
+}
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+img:hover{
+    transform: scale(1.02);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 20px 40px rgba(109, 1, 1, 0.715);
+    
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
